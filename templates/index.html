@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <title>Ollama Real-time Response</title>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #1c3b3b;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        #prompt {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            padding: 16px;
+            margin: auto;
+            border-radius: 20px;
+            border: none;
+            resize: none;
+            overflow: hidden;
+        }
+
+        #submit {
+            padding: 12px 30px;
+            border-radius: 7px;
+            background-color: #0e1d1d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            margin: auto;
+            border: 1px solid white;
+        }
+
+        #submit:hover {
+            background-color: #2E4848;
+            color: white;
+        }
+
+        #loading {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .response-container {
+            width: 75%;
+            background-color: #fff;
+            padding: 30px;
+            margin: 10px auto 15px auto;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .prompt {
+            font-weight: bold;
+            color: black;
+        }
+
+        .response {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Arkha AI</h1>
+    <textarea id="prompt" rows="4" placeholder="Masukkan prompt Anda di sini..."></textarea><br>
+    <button id="submit">Kirim</button>
+    <div id="loading">Loading...</div>
+    <div id="response"></div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+
+</html>
