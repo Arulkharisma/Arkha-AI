@@ -61,20 +61,3 @@ function displayTypingEffect(element, text) {
     }
     type();
 }
-
-// Penanganan textarea agar elastis
-const promptElement = document.getElementById('prompt');
-promptElement.addEventListener('input', function () {
-    promptElement.style.height = 'auto';
-    promptElement.style.height = (promptElement.scrollHeight) + 'px';
-});
-promptElement.addEventListener('input', function () {
-    const maxHeight = window.innerHeight * 0.10; // 25% dari tinggi tampilan
-    if (promptElement.scrollHeight > maxHeight) {
-        promptElement.style.overflowY = 'scroll';
-        promptElement.style.height = maxHeight + 'px';
-    } else {
-        promptElement.style.overflowY = 'hidden';
-        promptElement.style.height = promptElement.scrollHeight + 'px';
-    }
-});
