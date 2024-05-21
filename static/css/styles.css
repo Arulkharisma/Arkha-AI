@@ -1,26 +1,83 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #1c3b3b;
 }
 
-textarea {
+h1 {
+    color: white;
+    text-align: center;
+    font-weight: 900;
+}
+
+#prompt {
+    display: flex;
     width: 100%;
-    margin-bottom: 10px;
+    max-width: 600px;
+    padding: 16px;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    resize: none;
+    overflow: hidden;
 }
 
-button {
-    padding: 10px 15px;
-    font-size: 16px;
+#submit {
+    padding: 12px 30px;
+    border-radius: 7px;
+    background-color: #0e1d1d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    margin: 25px auto;
+    border: 1px solid white;
 }
 
-.loading {
+#submit:hover {
+    background-color: #2E4848;
+    color: white;
+}
+
+#loading {
     display: none;
-    font-size: 18px;
-    color: #333;
     margin-top: 10px;
+    text-align: center;
+    color: white;
 }
 
-pre {
+.response-container {
+    width: 75%;
+    background-color: #fff;
+    padding: 30px;
+    margin: 10px auto 15px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.prompt {
+    font-weight: bold;
+    color: black;
+}
+
+.response {
+    white-space: pre-wrap;
+    word-wrap: break-word;
     background-color: #f4f4f4;
     padding: 10px;
-    border: 1px solid #ddd;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+}
+
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
 }
